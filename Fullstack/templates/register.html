@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/CSS/register.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="/static/JS/script.js"></script>
+    <title>JOIV Service</title>
+</head>
+<body>
+    <h1>Register form</h1>
+    <form action="{{ url_for('register') }}" method="post">
+        <!--Headings for the form-->
+        <div class="headingsContainer">
+            <h3>Register</h3>
+            <p>Provide a valid email, password and username</p>
+        </div>
+
+        <!-- Main container for all inputs-->
+        <div class="mainContainer">
+            <!--Name-->
+            <label for="email">Your Email</label>
+            <input type="email" name="email" id="email" required>
+            <br>
+
+            <!--Username-->
+            <label for="username">Your Userame</label>
+            <!--Maske sure to put reqierd for both the inputfields-->
+            <input type="text" name="username" id="username"required>
+            <br>
+
+            <!--Email-->
+            <label for="username">Your name</label>
+            <!--Maske sure to put reqierd for both the inputfields-->
+            <input type="text" name="name" id="name" required>
+            <br>
+
+            <!--Password-->
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" name="confirm_password" id="confirm_password" required>
+            <br>
+
+            <!--Submit button-->
+            <button type="submit"value="Register">Register</button>
+
+            <!--Sig un link-->
+            <p class="login">Already a member? <a href="{{ url_for('login') }}">Login here!</a></p>
+        </div>
+    </form>
+
+</body>
+</html>
